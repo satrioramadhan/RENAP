@@ -1,10 +1,10 @@
 <x-login.app>
     <div class="auth-container">
         <div>
-            <img src="https://jurnal.iicet.org/plugins/themes/titanTheme/images/login.webp" alt="Register Image">
+            <img src="https://i.pinimg.com/564x/7b/5f/25/7b5f2558a8f6d14300e3f7190dc18a67.jpg" alt="Reset Password Image">
         </div>
         <div class="auth-form">
-            <h2 class="form-title">Daftar Akun</h2>
+            <h2 class="form-title">Buat Password</h2>
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -14,16 +14,10 @@
                     </ul>
                 </div>
             @endif
-            <form action="{{ route('register') }}" method="POST">
+            <form action="{{ route('password.update') }}" method="POST">
                 @csrf
-                <div class="form-group">
-                    <label for="name">Nama</label>
-                    <input type="text" id="name" name="name" value="{{ old('name') }}" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" value="{{ old('email') }}" class="form-control" required>
-                </div>
+                <input type="hidden" name="token" value="{{ $token }}">
+                <input type="hidden" name="email" value="{{ request('email') }}">
                 <div class="form-group position-relative">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" class="form-control" required>
@@ -35,10 +29,7 @@
                     <i class="bi bi-eye-slash position-absolute" id="toggleConfirmPassword" style="cursor: pointer; right: 10px; top: 38px;"></i>
                 </div>
                 <div class="form-button">
-                    <input type="submit" value="Register" class="btn btn-primary">
-                </div>
-                <div class="signup-link">
-                    <span>Udah punya akun ?<a href="{{ route('login') }}">Login</a></span>
+                    <input type="submit" value="Reset Password" class="btn btn-primary">
                 </div>
             </form>
         </div>

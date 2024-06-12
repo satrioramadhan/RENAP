@@ -197,3 +197,13 @@ h1 {
     font-size: 1.5rem;
     cursor: pointer;
 }
+
+.forgot-password {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
