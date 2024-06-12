@@ -1,0 +1,199 @@
+/* General Styles */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container */
+.auth-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Added to position back button */
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.btn-back {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #e41616;
+    font-weight: bold;
+}
+
+.btn-back i {
+    margin-right: 5px;
+}
+
+.auth-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.auth-form {
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h2.form-title,
+h1 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.alert {
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-button {
+    margin-top: 1rem;
+}
+
+.form-button input {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-button input:hover {
+    background-color: #0056b3;
+}
+
+.signup-link,
+.social-login {
+    margin-top: 1.5rem;
+}
+
+.signup-link a,
+.social-login .social-label {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-link a:hover,
+.social-login .social-label:hover {
+    text-decoration: underline;
+}
+
+.socials {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.socials li {
+    display: inline-block;
+}
+.socials li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    background: linear-gradient(
+        90deg,
+        #4285f4 0%,
+        #34a853 25%,
+        #fbbc05 50%,
+        #ea4335 75%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.3s;
+    background-size: 200%;
+}
+
+.socials li a:hover {
+    background-position: 100%;
+}
+
+/* Styles for Alerts */
+.alert {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Added to space out content */
+    position: relative; /* Added for close button positioning */
+}
+
+.alert ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.alert ul li {
+    list-style: disc;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #842029;
+    border: 1px solid #f5c2c7;
+}
+
+.alert-success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border: 1px solid #badbcc;
+}
+
+.alert-info {
+    background-color: #cff4fc;
+    color: #055160;
+    border: 1px solid #b6effb;
+}
+
+.alert-dismissible .close {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.5rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
