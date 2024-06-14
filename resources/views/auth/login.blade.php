@@ -42,7 +42,7 @@
                 <div class="social-login">
                     <span class="social-label">Atau login dengan</span>
                     <ul class="socials">
-                        <li><a href=""><i class="bi bi-google"></i></a></li>
+                        <li><a href={{ route('google') }}><i class="bi bi-google"></i></a></li>
                         <!-- Add other social login icons here -->
                     </ul>
                 </div>

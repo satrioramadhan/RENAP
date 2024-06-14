@@ -48,4 +48,15 @@ class User extends Authenticatable implements MustVerifyEmailContract
 
         return null;
     }
+
+    public function userAccommodations()
+    {
+        return $this->hasMany(UserAccommodation::class);
+    }
+
+    // Relasi dengan Weight
+    public function weights()
+    {
+        return $this->hasOne(Weight::class);
+    }
 }

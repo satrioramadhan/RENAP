@@ -19,7 +19,7 @@
                                 <a class="nav-link" href="#works">Daftar Inap</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">SPK Renap</a>
+                                <a class="nav-link" href="{{ route('spk.index') }}">SPK Renap</a>
                             </li>
                             @auth
                                 @if (Auth::user()->is_admin)
@@ -40,7 +40,7 @@
                                         {{ Auth::user()->name }}
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Edit User</a>
+                                        <a class="dropdown-item" href="{{ route('profile.edit') }}">Edit User</a>
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="bi bi-box-arrow-left"></i>  Logout</a>
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

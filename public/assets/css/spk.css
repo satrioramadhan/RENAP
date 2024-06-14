@@ -1,0 +1,74 @@
+/* General styling for the container */
+.container {
+    padding-top: 70px; /* Adjust this value based on your navbar height */
+    padding-bottom: 20px;
+}
+
+/* Styling for the form inputs */
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    margin-bottom: 15px;
+}
+
+/* Card styling */
+.card {
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-right: 10px;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+/* Custom margin for rows */
+.row {
+    margin-bottom: 15px;
+}
+
+/* Navbar adjustments */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Adjust form container */
+form {
+    margin-bottom: 20px;
+}
+
+/* Heading styling */
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}

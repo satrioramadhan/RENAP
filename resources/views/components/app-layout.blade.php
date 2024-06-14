@@ -8,6 +8,7 @@
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" href="{{ asset('images/logoo.png') }}" type="image/png">
 
     <title>Renap</title>
   </head>
@@ -74,5 +75,22 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var accordions = document.querySelectorAll('.accordion-button');
+
+            accordions.forEach(function(accordion) {
+                accordion.addEventListener('click', function() {
+                    var collapse = this.nextElementSibling;
+                    if (collapse.classList.contains('show')) {
+                        collapse.classList.remove('show');
+                    } else {
+                        collapse.classList.add('show');
+                    }
+                });
+            });
+        });
+    </script>
+
   </body>
 </html>

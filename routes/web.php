@@ -1,13 +1,14 @@
 <?php
 
-use App\Http\Controllers\Auth;
-
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Auth;
+use App\Http\Controllers;
 use App\Http\Controllers\Admin;
 
+Route::get('/', [Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/auth/google', [Auth\GoogleController::class, 'redirectToGoogle'])->name('google');
+Route::get('/auth/google/callback', [Auth\GoogleController::class, 'handleGoogleCallback']);
 
 Route::get('login', [Auth\LoginController::class, 'showLoginForm'])->name('login');
 Route::post('login', [Auth\LoginController::class, 'login']);
@@ -27,11 +28,27 @@ Route::post('password/email', [Auth\ForgotPasswordController::class, 'sendResetL
 Route::get('password/reset/{token}', [Auth\ResetPasswordController::class, 'showResetForm'])->name('password.reset');
 Route::post('password/reset', [Auth\ResetPasswordController::class, 'reset'])->name('password.update');
 
-
-
 Route::prefix('admin')->name('admin.')->middleware(['auth', 'verified', 'is_admin'])->group(function() {
     Route::get('dashboard', Admin\DashboardController::class)->name('dashboard');
     Route::resource('accommodations', Admin\AccommodationController::class);
     Route::resource('users', Admin\UserController::class);
     Route::put('/users/{user}/toggle-admin', [Admin\UserController::class, 'toggleAdmin'])->name('users.toggle-admin');
+});
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('profile/edit', [Controllers\UserController::class, 'edit'])->name('profile.edit');
+    Route::post('profile/update', [Controllers\UserController::class, 'update'])->name('profile.update');
+});
+
+// Rute untuk SPK Renap
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/spk-renap', [Controllers\SPKController::class, 'showAccommodations'])->name('spk.index');
+    Route::post('/spk-renap/choose', [Controllers\SPKController::class, 'chooseAccommodations'])->name('spk.choose');
+    Route::get('/spk-renap/distance', [Controllers\SPKController::class, 'inputDistance'])->name('spk.distance');
+    Route::post('/spk-renap/distance', [Controllers\SPKController::class, 'storeDistance'])->name('spk.storeDistance');
+    Route::get('/spk-renap/weights', [Controllers\SPKController::class, 'inputWeights'])->name('spk.weights');
+    Route::post('/spk-renap/weights', [Controllers\SPKController::class, 'storeWeights'])->name('spk.storeWeights');
+    Route::get('/spk-renap/results', [Controllers\SPKController::class, 'showResults'])->name('spk.results');
+    Route::post('/spk-renap/reset', [Controllers\SPKController::class, 'resetSPK'])->name('spk.reset');
+    Route::post('/spk-renap/reset/home', [Controllers\SPKController::class, 'backHome'])->name('back.home');
 });
