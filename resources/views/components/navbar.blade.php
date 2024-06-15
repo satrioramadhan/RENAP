@@ -19,7 +19,7 @@
                                 <a class="nav-link" href="#works">Daftar Inap</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('spk.index') }}">SPK Renap</a>
+                                <a class="nav-link" href="{{ route('spk.home') }}">SPK Renap</a>
                             </li>
                             @auth
                                 @if (Auth::user()->is_admin)

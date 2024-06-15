@@ -84,10 +84,7 @@
                 @csrf
                 <button type="submit" class="btn btn-primary">Mulai Menghitung SPK Lagi</button>
             </form>
-            <form action="{{ route('back.home') }}" method="POST" style="display: inline;">
-                @csrf
-                <button type="submit" class="btn-secondary">Kembali ke Home</button>
-            </form>
+                <a href="{{ route('home') }}" type="submit" class="btn-secondary">Kembali ke Home</a>
         </div>
     </div>
 </x-app-layout>

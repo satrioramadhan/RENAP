@@ -11,6 +11,20 @@ use Illuminate\Support\Facades\DB;
 
 class SPKController extends Controller
 {
+    public function checkSPK()
+    {
+        $user = Auth::user();
+        // Cek apakah ada data final_scores atau saw_preference_values untuk user yang login
+        $finalScoresExist = DB::table('final_scores')->where('user_id', $user->id)->exists();
+        $sawResultsExist = DB::table('saw_preference_values')->where('user_id', $user->id)->exists();
+
+        if ($finalScoresExist || $sawResultsExist) {
+            return redirect()->route('spk.results');
+        } else {
+            return redirect()->route('spk.index');
+        }
+    }
+
     public function showAccommodations()
     {
         $accommodations = Accommodation::all();
@@ -95,13 +109,5 @@ class SPKController extends Controller
         return redirect()->route('spk.index');
     }
 
-    public function backHome()
-    {
-        $user = Auth::user();
-        UserAccommodation::where('user_id', $user->id)->delete();
-        Weight::where('user_id', $user->id)->delete();
-
-        return redirect()->route('home');
-    }
 
 }

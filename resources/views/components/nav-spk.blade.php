@@ -74,7 +74,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-            <form action="{{ route('back.home') }}" method="POST" style="display: inline;">
+            <form action="{{ route('home') }}" method="POST" style="display: inline;">
                 @csrf
                 <button type="submit" class="btn-home" style="background-color: white; border:none;" >Home</button>
             </form>

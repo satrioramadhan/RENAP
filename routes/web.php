@@ -42,6 +42,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 // Rute untuk SPK Renap
 Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/spk-home', [Controllers\SPKController::class, 'checkSPK'])->name('spk.home');
     Route::get('/spk-renap', [Controllers\SPKController::class, 'showAccommodations'])->name('spk.index');
     Route::post('/spk-renap/choose', [Controllers\SPKController::class, 'chooseAccommodations'])->name('spk.choose');
     Route::get('/spk-renap/distance', [Controllers\SPKController::class, 'inputDistance'])->name('spk.distance');
@@ -52,3 +53,5 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/spk-renap/reset', [Controllers\SPKController::class, 'resetSPK'])->name('spk.reset');
     Route::post('/spk-renap/reset/home', [Controllers\SPKController::class, 'backHome'])->name('back.home');
 });
+
+
