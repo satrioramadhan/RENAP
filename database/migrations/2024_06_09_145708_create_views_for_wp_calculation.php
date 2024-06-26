@@ -16,7 +16,7 @@ class CreateViewsForWpCalculation extends Migration
     {
         // View untuk normalisasi bobot
         DB::statement("
-            CREATE OR REPLACE VIEW normalized_weights AS
+            CREATE VIEW normalized_weights AS
             SELECT
                 user_id,
                 weight_rating / SUM(weight_rating + weight_price + weight_distance + weight_public_facilities + weight_facilities + weight_distance_to_city) OVER (PARTITION BY user_id) AS normalized_weight_rating,
@@ -30,7 +30,7 @@ class CreateViewsForWpCalculation extends Migration
 
         // View untuk menghitung nilai vektor S untuk setiap akomodasi
         DB::statement("
-            CREATE OR REPLACE VIEW accommodation_vectors AS
+            CREATE VIEW accommodation_vectors AS
             SELECT
                 ua.user_id,
                 ua.accommodation_id,
@@ -53,7 +53,7 @@ class CreateViewsForWpCalculation extends Migration
 
         // View untuk menghitung nilai preferensi
         DB::statement("
-            CREATE OR REPLACE VIEW preference_values AS
+            CREATE VIEW preference_values AS
             SELECT
                 user_id,
                 accommodation_id,
@@ -63,7 +63,7 @@ class CreateViewsForWpCalculation extends Migration
 
         // View untuk menjumlahkan semua nilai preferensi
         DB::statement("
-            CREATE OR REPLACE VIEW total_preference AS
+            CREATE VIEW total_preference AS
             SELECT
                 user_id,
                 SUM(preference_value) AS total_preference_value
@@ -73,7 +73,7 @@ class CreateViewsForWpCalculation extends Migration
 
         // View untuk menghitung nilai akhir untuk setiap akomodasi
         DB::statement("
-            CREATE OR REPLACE VIEW final_scores AS
+            CREATE VIEW final_scores AS
             SELECT
                 pv.user_id,
                 pv.accommodation_id,
@@ -86,7 +86,7 @@ class CreateViewsForWpCalculation extends Migration
 
         //SAW
         DB::statement("
-        CREATE OR REPLACE VIEW normalized_decision_matrix AS
+        CREATE VIEW normalized_decision_matrix AS
         SELECT
             ua.user_id,
             ua.accommodation_id,
@@ -101,7 +101,7 @@ class CreateViewsForWpCalculation extends Migration
 
 
         DB::statement("
-        CREATE OR REPLACE VIEW saw_preference_values AS
+        CREATE VIEW saw_preference_values AS
         SELECT
             ndm.user_id,
             ndm.accommodation_id,

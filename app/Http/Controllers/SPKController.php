@@ -85,20 +85,26 @@ class SPKController extends Controller
     public function showResults()
     {
         $user = Auth::user();
+
+        // Ambil dan urutkan final_scores berdasarkan final_score secara descending
         $finalScores = DB::table('final_scores')
-            ->where('user_id', $user->id)
+            ->where('final_scores.user_id', $user->id)
             ->join('accommodations', 'final_scores.accommodation_id', '=', 'accommodations.id')
             ->select('accommodations.name', 'final_scores.final_score')
+            ->orderBy('final_scores.final_score', 'desc')
             ->get();
 
+        // Ambil dan urutkan saw_preference_values berdasarkan preference_value secara descending
         $sawResults = DB::table('saw_preference_values')
-            ->where('user_id', $user->id)
+            ->where('saw_preference_values.user_id', $user->id)
             ->join('accommodations', 'saw_preference_values.accommodation_id', '=', 'accommodations.id')
             ->select('accommodations.name', 'saw_preference_values.preference_value')
+            ->orderBy('saw_preference_values.preference_value', 'desc')
             ->get();
 
         return view('spk.results', compact('finalScores', 'sawResults'));
     }
+
 
     public function resetSPK()
     {
