@@ -82,66 +82,66 @@
                 <label>Rating</label>
                 <select name="weight_rating" required>
                     <option value="" disabled selected>Isikan Bobot</option>
-                    <option value="1">Tidak Diprioritaskan</option>
-                    <option value="2">Sedikit Diprioritaskan</option>
-                    <option value="3">Cukup Diprioritaskan</option>
-                    <option value="4">Diprioritaskan</option>
-                    <option value="5">Sangat Diprioritaskan</option>
+                    <option value="1">Tidak Diprioritaskan (Bobot:1)</option>
+                    <option value="2">Sedikit Diprioritaskan (Bobot:2)</option>
+                    <option value="3">Cukup Diprioritaskan (Bobot:3)</option>
+                    <option value="4">Diprioritaskan (Bobot:4)</option>
+                    <option value="5">Sangat Diprioritaskan (Bobot:5)</option>
                 </select>
             </div>
             <div>
                 <label>Harga</label>
                 <select name="weight_price" required>
                     <option value="" disabled selected>Isikan Bobot</option>
-                    <option value="1">Tidak Diprioritaskan</option>
-                    <option value="2">Sedikit Diprioritaskan</option>
-                    <option value="3">Cukup Diprioritaskan</option>
-                    <option value="4">Diprioritaskan</option>
-                    <option value="5">Sangat Diprioritaskan</option>
+                    <option value="1">Tidak Diprioritaskan (Bobot:1)</option>
+                    <option value="2">Sedikit Diprioritaskan (Bobot:2)</option>
+                    <option value="3">Cukup Diprioritaskan (Bobot:3)</option>
+                    <option value="4">Diprioritaskan (Bobot:4)</option>
+                    <option value="5">Sangat Diprioritaskan (Bobot:5)</option>
                 </select>
             </div>
             <div>
                 <label>Jarak ke Destinasi</label>
                 <select name="weight_distance" required>
                     <option value="" disabled selected>Isikan Bobot</option>
-                    <option value="1">Tidak Diprioritaskan</option>
-                    <option value="2">Sedikit Diprioritaskan</option>
-                    <option value="3">Cukup Diprioritaskan</option>
-                    <option value="4">Diprioritaskan</option>
-                    <option value="5">Sangat Diprioritaskan</option>
+                    <option value="1">Tidak Diprioritaskan (Bobot:1)</option>
+                    <option value="2">Sedikit Diprioritaskan (Bobot:2)</option>
+                    <option value="3">Cukup Diprioritaskan (Bobot:3)</option>
+                    <option value="4">Diprioritaskan (Bobot:4)</option>
+                    <option value="5">Sangat Diprioritaskan (Bobot:5)</option>
                 </select>
             </div>
             <div>
                 <label>Jumlah Fasilitas Publik</label>
                 <select name="weight_public_facilities" required>
                     <option value="" disabled selected>Isikan Bobot</option>
-                    <option value="1">Tidak Diprioritaskan</option>
-                    <option value="2">Sedikit Diprioritaskan</option>
-                    <option value="3">Cukup Diprioritaskan</option>
-                    <option value="4">Diprioritaskan</option>
-                    <option value="5">Sangat Diprioritaskan</option>
+                    <option value="1">Tidak Diprioritaskan (Bobot:1)</option>
+                    <option value="2">Sedikit Diprioritaskan (Bobot:2)</option>
+                    <option value="3">Cukup Diprioritaskan (Bobot:3)</option>
+                    <option value="4">Diprioritaskan (Bobot:4)</option>
+                    <option value="5">Sangat Diprioritaskan (Bobot:5)</option>
                 </select>
             </div>
             <div>
                 <label>Jumlah Fasilitas</label>
                 <select name="weight_facilities" required>
                     <option value="" disabled selected>Isikan Bobot</option>
-                    <option value="1">Tidak Diprioritaskan</option>
-                    <option value="2">Sedikit Diprioritaskan</option>
-                    <option value="3">Cukup Diprioritaskan</option>
-                    <option value="4">Diprioritaskan</option>
-                    <option value="5">Sangat Diprioritaskan</option>
+                    <option value="1">Tidak Diprioritaskan (Bobot:1)</option>
+                    <option value="2">Sedikit Diprioritaskan (Bobot:2)</option>
+                    <option value="3">Cukup Diprioritaskan (Bobot:3)</option>
+                    <option value="4">Diprioritaskan (Bobot:4)</option>
+                    <option value="5">Sangat Diprioritaskan (Bobot:5)</option>
                 </select>
             </div>
             <div>
                 <label>Jarak ke Kota</label>
                 <select name="weight_distance_to_city" required>
                     <option value="" disabled selected>Isikan Bobot</option>
-                    <option value="1">Tidak Diprioritaskan</option>
-                    <option value="2">Sedikit Diprioritaskan</option>
-                    <option value="3">Cukup Diprioritaskan</option>
-                    <option value="4">Diprioritaskan</option>
-                    <option value="5">Sangat Diprioritaskan</option>
+                    <option value="1">Tidak Diprioritaskan (Bobot:1)</option>
+                    <option value="2">Sedikit Diprioritaskan (Bobot:2)</option>
+                    <option value="3">Cukup Diprioritaskan (Bobot:3)</option>
+                    <option value="4">Diprioritaskan (Bobot:4)</option>
+                    <option value="5">Sangat Diprioritaskan (Bobot:5)</option>
                 </select>
             </div>
             <button type="submit" class="btn btn-primary">Selanjutnya</button>

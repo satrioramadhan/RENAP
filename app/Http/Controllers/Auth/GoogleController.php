@@ -41,7 +41,7 @@ class GoogleController extends Controller
 
             return redirect('/');
         } catch (\Exception $e) {
-            return redirect('/login')->with('error', 'Something went wrong or you have rejected the app!');
+            return redirect('/login')->with('error', 'Terjadi kesalahan, silahkan coba kembali');
         }
     }
 

@@ -27,7 +27,7 @@
     </style>
     <div class="container">
         <h1>Masukkan Jarak Destinasi</h1>
-        <p>Kamu bisa mengisi jarak destinasi yang ingin kamu kunjungi dari tempat penginapan yang kamu pilih, atau kamu juga bisa mengisi jarak dari titik lokasi kamu sekarang ini dengan penginapan yang ingin kamu pilih. sesuaikan dengna kebutuhan kamu ^^</p>
+        <p>Kamu bisa mengisi jarak destinasi yang ingin kamu kunjungi dari tempat penginapan yang kamu pilih, atau kamu juga bisa mengisi jarak dari titik lokasi kamu sekarang ini dengan penginapan yang ingin kamu pilih. isikan jarak dengan satuan kilometer(km), sesuaikan dengna kebutuhan kamu ^^</p>
         <form action="{{ route('spk.storeDistance') }}" method="POST">
             @csrf
             @foreach($accommodations as $accommodation)

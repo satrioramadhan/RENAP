@@ -59,7 +59,7 @@
             </tbody>
         </table>
 
-        <h2>Metode SAW</h2>
+        {{-- <h2>Metode SAW</h2>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -77,7 +77,7 @@
                     </tr>
                 @endforeach
             </tbody>
-        </table>
+        </table> --}}
 
         <div class="action-buttons">
             <form action="{{ route('spk.reset') }}" method="POST">
