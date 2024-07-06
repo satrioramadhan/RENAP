@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-navbar/>
 
-    <div class="d-flex justify-content-center align-items-center min-vh-100">
+    <div style="margin-top: 60px" class="d-flex justify-content-center align-items-center min-vh-100">
         <div class="col-md-8">
             @if (session('status'))
                 <div class="alert alert-success" role="alert">

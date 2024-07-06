@@ -1,10 +1,10 @@
 <x-admin>
     <div class="head-title">
         <div class="left">
-            <h1>Users</h1>
+            <h1>User</h1>
             <ul class="breadcrumb">
                 <li>
-                    <a href="#">Dashboard</a>
+                    <a href="#">User</a>
                 </li>
                 <li><i class='bx bx-chevron-right'></i></li>
                 <li>

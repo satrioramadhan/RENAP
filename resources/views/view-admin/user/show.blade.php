@@ -4,7 +4,7 @@
             <h1>Detail Data User</h1>
             <ul class="breadcrumb">
                 <li>
-                    <a href="#">Dashboard</a>
+                    <a href="#">User</a>
                 </li>
                 <li><i class='bx bx-chevron-right'></i></li>
                 <li>

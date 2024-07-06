@@ -36,55 +36,70 @@
             margin-top: 30px;
         }
 
+        @media (max-width: 768px) {
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .action-buttons form, .action-buttons a {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
     </style>
     <div class="container">
         <h1>Hasil Perhitungan SPK</h1>
         <h2>Metode WP</h2>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Rangking</th>
-                    <th>Nama</th>
-                    <th>Skor Akhir</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($finalScores as $index => $result)
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
                     <tr>
-                        <td>{{ $index + 1 }}</td>
-                        <td>{{ $result->name }}</td>
-                        <td>{{ $result->final_score }}</td>
+                        <th>Rangking</th>
+                        <th>Nama</th>
+                        <th>Skor Akhir</th>
                     </tr>
-                @endforeach
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach($finalScores as $index => $result)
+                        <tr>
+                            <td>{{ $index + 1 }}</td>
+                            <td>{{ $result->name }}</td>
+                            <td>{{ $result->final_score }}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
 
         {{-- <h2>Metode SAW</h2>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Rangking</th>
-                    <th>Nama</th>
-                    <th>Nilai Preferensi</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($sawResults as $index => $result)
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
                     <tr>
-                        <td>{{ $index + 1 }}</td>
-                        <td>{{ $result->name }}</td>
-                        <td>{{ $result->preference_value }}</td>
+                        <th>Rangking</th>
+                        <th>Nama</th>
+                        <th>Nilai Preferensi</th>
                     </tr>
-                @endforeach
-            </tbody>
-        </table> --}}
+                </thead>
+                <tbody>
+                    @foreach($sawResults as $index => $result)
+                        <tr>
+                            <td>{{ $index + 1 }}</td>
+                            <td>{{ $result->name }}</td>
+                            <td>{{ $result->preference_value }}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div> --}}
 
         <div class="action-buttons">
             <form action="{{ route('spk.reset') }}" method="POST">
                 @csrf
                 <button type="submit" class="btn btn-primary">Mulai Menghitung SPK Lagi</button>
             </form>
-                <a href="{{ route('home') }}" type="submit" class="btn-secondary">Kembali ke Home</a>
+            <a href="{{ route('home') }}" type="submit" class="btn-secondary">Kembali ke Home</a>
         </div>
     </div>
 </x-app-layout>

@@ -18,9 +18,9 @@
                 </div>
             @endif
             @if (session('status'))
-            <div class="alert alert-success" role="alert">
-                {{ session('status') }}
-            </div>
+                <div class="alert alert-success" role="alert">
+                    {{ session('status') }}
+                </div>
             @endif
             <form action="{{ route('login') }}" method="POST">
                 @csrf
@@ -42,7 +42,7 @@
                 <div class="social-login">
                     <span class="social-label">Atau login dengan</span>
                     <ul class="socials">
-                        <li><a href={{ route('google') }}><i class="bi bi-google"></i></a></li>
+                        <li><a href="{{ route('google') }}"><i class="bi bi-google"></i></a></li>
                         <!-- Add other social login icons here -->
                     </ul>
                 </div>

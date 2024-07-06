@@ -7,6 +7,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding: 10px;
 }
 
 /* Container */
@@ -23,6 +24,18 @@ body {
     align-items: center;
     text-align: center;
     position: relative; /* Added to position back button */
+}
+
+@media (max-width: 768px) {
+    .auth-container {
+        grid-template-columns: 1fr;
+    }
+    .auth-container img {
+        display: none;
+    }
+    .auth-form {
+        max-width: 100%;
+    }
 }
 
 /* Back Button */

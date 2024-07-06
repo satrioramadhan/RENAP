@@ -4,7 +4,7 @@
             <img src="https://i.pinimg.com/564x/7b/5f/25/7b5f2558a8f6d14300e3f7190dc18a67.jpg" alt="Reset Password Image">
         </div>
         <div class="auth-form">
-            <h2 class="form-title">Buat Password</h2>
+            <h2 class="form-title">Buat Password Baru</h2>
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -29,7 +29,7 @@
                     <i class="bi bi-eye-slash position-absolute" id="toggleConfirmPassword" style="cursor: pointer; right: 10px; top: 38px;"></i>
                 </div>
                 <div class="form-button">
-                    <input type="submit" value="Reset Password" class="btn btn-primary">
+                    <input type="submit" value="Simpan Password" class="btn btn-primary">
                 </div>
             </form>
         </div>
