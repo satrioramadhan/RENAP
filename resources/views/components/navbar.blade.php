@@ -15,10 +15,10 @@
                                 <a class="nav-link" href="/">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#about">About</a>
+                                <a class="nav-link" href="/#about">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#works">Daftar Inap</a>
+                                <a class="nav-link" href="/#works">Daftar Inap</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('spk.home') }}">SPK Renap</a>

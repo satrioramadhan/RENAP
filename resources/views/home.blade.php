@@ -48,7 +48,7 @@
                     <div class="block">
                         <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">SO, Mau Coba SPK renap?</h1>
                         <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Pastikan kamu sudah mendaftar akun, jika belum kamu bisa melakukan registrasi.<a href="/login"  class="klik-disini"> Klik disini</a></p>
-                        <a href="{{ route('spk.index') }}" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Coba SPK</a>
+                        <a href="{{ route('spk.home') }}" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Coba SPK</a>
                     </div>
                 </div>
 
